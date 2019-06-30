@@ -1,0 +1,381 @@
+html, body {
+  padding: 0;
+}
+
+h2 {
+  color: #191919;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px;
+}
+
+h2 ~ p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #787878;
+}
+
+.main-button {
+  width: 180px;
+  height: 55px;
+  color: #fff;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #10c9c3;
+  border: none;
+}
+.main-button:hover {
+  background-color: #79dad6;
+  transition: 0.15s ease-in-out;
+}
+
+header {
+  background: url("./../img/banner-bg.jpg") no-repeat center center/cover;
+  color: #191919;
+  font-family: "Montserrat", sans-serif;
+}
+header .container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header a {
+  color: #191919;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0.5rem 0 0.5rem 2rem !important;
+}
+header a:hover {
+  color: #10c9c3;
+}
+header nav {
+  padding: 0.5rem 0 !important;
+  margin-bottom: 150px;
+}
+header .row {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+header .banner-text {
+  padding: 0 10px;
+  margin-bottom: 200px;
+}
+header .banner-text h1 {
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+header .banner-text p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #787878;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#about {
+  padding: 95px 0;
+}
+#about p {
+  margin-bottom: 35px;
+}
+
+#skills {
+  font-family: "Montserrat", sans-serif;
+}
+#skills .skills-stats, #skills .skills-bg {
+  height: 570px;
+}
+#skills .skills-stats {
+  -moz-box-shadow: inset 60px 50px 100px #eeeeee;
+  -webkit-box-shadow: inset 60px 50px 100px #eeeeee;
+  box-shadow: inset 60px 50px 100px #eeeeee;
+  padding: 0 8%;
+}
+#skills .skills-stats h2 {
+  margin: 165px 0 40px 0;
+}
+#skills .skills-stats p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #191919;
+  font-family: "Montserrat", sans-serif;
+}
+#skills .skills-stats span::after {
+  content: "%";
+}
+#skills .skills-stats .skills-line {
+  width: 100%;
+  height: 3px;
+  background-color: #d8d8d8;
+  margin-bottom: 40px;
+}
+#skills .skills-stats .green-line {
+  background-color: #10c9c3;
+  height: 3px;
+}
+#skills .skills-bg {
+  background: url("./../img/skills-bg.jpg") no-repeat center/cover;
+}
+
+#numbers {
+  background-color: #10c9c3;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+#numbers .container {
+  padding: 50px 15px;
+}
+#numbers .numbers-block {
+  display: flex;
+  padding: 50px 15px;
+}
+#numbers .numbers-block .numbers-block-text {
+  margin-left: 27px;
+}
+#numbers .numbers-block .numbers-block-text span:first-child {
+  font-size: 18px;
+}
+
+#work .work-image {
+  max-width: 100%;
+  height: 300px;
+  position: relative;
+}
+#work .work-image .work-image-filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+#work .work-image .work-image-filter img {
+  display: block;
+  margin: 140px auto;
+}
+#work .work-image:hover div {
+  display: block;
+}
+#work #load-more {
+  width: 100%;
+  height: 100px;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #787878;
+  font-size: 12px;
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+#dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 8;
+}
+
+#image {
+  position: fixed;
+  display: none;
+  z-index: 99;
+}
+@media only screen and (min-width: 320px) {
+  #image {
+    width: 100%;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 576px) {
+  #image {
+    width: 560px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -280px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #image {
+    width: 750px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -375px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #image {
+    width: 1000px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -500px;
+  }
+}
+
+#work-process {
+  padding: 100px 0;
+}
+#work-process .work-process-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+#work-process p {
+  margin-bottom: 55px;
+}
+#work-process .video-cover {
+  position: absolute;
+  width: 100%;
+  height: 572px;
+  background: url("./../img/cat-maneki.jpg") no-repeat center bottom/cover;
+  z-index: 3;
+}
+#work-process .video-cover img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -43px;
+  margin-left: -43px;
+}
+#work-process .video-cover img:hover {
+  cursor: pointer;
+}
+
+#services {
+  padding: 50px 0;
+}
+#services .col-md-3 {
+  padding: 25px 15px;
+}
+#services img {
+  margin-bottom: 30px;
+}
+#services h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+#services p {
+  font-family: "Nunito Sans", sans-serif;
+  color: #787878;
+}
+
+#testimonials {
+  background-color: #10c9c3;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  padding: 60px 0;
+}
+#testimonials .container {
+  padding: 0 15px;
+}
+#testimonials #carouselExampleIndicators {
+  min-height: 360px;
+}
+#testimonials h4 {
+  margin: 100px 0 30px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+#testimonials h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+#clients img {
+  padding: 60px 0;
+}
+
+#need-project {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+}
+#need-project .form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#need-project .form-wrapper p {
+  margin: 0;
+  padding-bottom: 8px;
+}
+#need-project .form-wrapper input, #need-project .form-wrapper textarea {
+  margin-top: 30px;
+  border: none;
+  border-radius: 0;
+  max-width: 100%;
+}
+#need-project .form-wrapper input {
+  height: 48px;
+}
+#need-project .form-wrapper .name-email-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  #need-project .form-wrapper .name-email-wrapper input {
+    max-width: 321px;
+  }
+}
+#need-project .form-wrapper textarea {
+  min-height: 170px;
+  overflow: auto;
+  resize: none;
+}
+#need-project .form-wrapper button {
+  display: block;
+  margin: 30px auto 0;
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #191919;
+  color: #bcbcbc;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+}
+footer h3 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  color: #bcbcbc;
+  text-transform: capitalize;
+}
+footer .footer-socials {
+  padding-left: 108px;
+}
+footer .footer-col, footer .footer-links, footer .footer-socials {
+  margin: 25px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,454 @@
+$color-dark: #191919;
+$color-bluegreen: #10c9c3;
+$color-grey: #787878;
+$font-montserrat-med: "Montserrat", sans-serif;
+$font-nunito: 'Nunito Sans', sans-serif;
+
+@mixin xs {
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+}
+
+html, body{
+    padding: 0;
+   
+}
+
+
+h2{
+    color: $color-dark;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: $font-montserrat-med;
+    margin-bottom: 40px;
+    
+}
+
+h2~p{
+    font-family: $font-nunito;
+    color: $color-grey;
+}
+
+.main-button{
+    width: 180px;
+    height: 55px;
+    color: #fff;
+    font-size: 12px!important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $font-montserrat-med;
+    background-color: $color-bluegreen;
+    border: none;
+    &:hover{
+        background-color: #79dad6;
+        transition: .15s ease-in-out;
+    }
+}
+
+header{
+    background: url("./../img/banner-bg.jpg") no-repeat center center / cover;
+    .container-header{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    color: $color-dark;
+    font-family: $font-montserrat-med;
+    a{
+      color: $color-dark;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: .5rem 0 .5rem 2rem!important;
+      &:hover{
+          color: $color-bluegreen;
+      }
+    }
+
+    nav{
+        padding: .5rem 0!important;
+        margin-bottom: 150px;
+    }
+
+    .row{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+   
+    .banner-text{
+        padding: 0 10px;
+        margin-bottom: 200px;
+        h1{
+            font-weight: 600;
+            font-size: 38px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        p{
+            font-family: $font-nunito;
+            color: $color-grey;
+            font-size: 18px;
+            
+            margin-bottom: 40px;
+        }
+
+    }
+}
+
+#about{
+    padding: 95px 0;
+    
+    p{
+        margin-bottom: 35px;
+    }
+}
+
+#skills{
+    font-family: $font-montserrat-med;
+    .skills-stats, .skills-bg{
+        height: 570px;
+    }
+
+    .skills-stats{
+        
+        -moz-box-shadow: inset 60px 50px 100px #eeeeee;
+        -webkit-box-shadow: inset 60px 50px 100px #eeeeee;
+        box-shadow: inset 60px 50px 100px #eeeeee;
+        padding: 0 8%;
+        h2{
+            margin: 165px 0 40px 0;
+        }
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            color: $color-dark;
+            font-family: $font-montserrat-med;
+        }
+        span{
+            &::after{
+                content: "%";
+            }
+        }
+        .skills-line{
+            width: 100%;
+            height: 3px;
+            background-color: #d8d8d8;
+            margin-bottom: 40px;
+        }
+        .green-line{
+            background-color: $color-bluegreen;
+            height: 3px;
+        }
+       
+    }
+    .skills-bg{
+        background: url("./../img/skills-bg.jpg") no-repeat center / cover;
+
+    }
+}
+
+#numbers{
+    background-color: $color-bluegreen;
+    color: #fff;
+    font-family: $font-montserrat-med;
+    font-size: 12px;
+    .container{
+        padding: 50px 15px;
+    }
+   
+    .numbers-block{
+        display: flex;
+        padding: 50px 15px;
+        .numbers-block-text{
+            margin-left: 27px;
+            span{
+                &:first-child{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+#work{
+    
+    .work-image{
+        max-width: 100%;
+        height: 300px;
+        position: relative;
+        
+        
+     .work-image-filter{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            img{
+                display: block;
+                margin: 140px auto;
+            }
+            background-color: rgba($color: #000000, $alpha: .7);
+            display: none;
+                
+        }
+        &:hover div{
+            display: block;
+        }
+    }
+
+   
+  
+    #load-more{
+        width: 100%;
+        height: 100px;
+        background-color: #f5f5f5;
+        text-align: center;
+        font-family: $font-montserrat-med;
+        color: $color-grey;
+        font-size: 12px;
+        padding-top: 40px;
+        cursor: pointer;
+    }
+}
+
+#dark{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .7);
+    display: none;
+    z-index: 8;
+}
+
+#image{
+    position: fixed;
+    @include xs{
+        width: 100%;
+        height: 400px;
+        top: 50%;
+        margin-top: -200px;
+        left: 0
+        
+    }
+    @include sm{
+        width: 560px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -280px;
+    }
+    @include md{
+        width: 750px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -375px;
+    }
+    @include xl{
+        width: 1000px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        margin-top: -400px;
+        margin-left: -500px;
+    }
+    
+    
+   
+    display: none;
+    z-index: 99;
+}
+
+#work-process{
+    padding: 100px 0;
+    .work-process-container{
+        max-width: 1170px;
+        margin: 0 auto;
+        position: relative;
+    }
+    p{
+        margin-bottom: 55px;
+        
+    }
+    .video-cover{
+        position: absolute;
+        width: 100%;
+        height: 572px;
+        background: url('./../img/cat-maneki.jpg') no-repeat center bottom / cover;
+        z-index: 3;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -43px;
+            margin-left: -43px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#services{
+    padding: 50px 0;
+
+    .col-md-3{
+        padding: 25px 15px;
+    }
+
+    img{
+        margin-bottom: 30px;
+    }
+
+    h6{
+        font-family: $font-montserrat-med;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    p{
+        font-family: $font-nunito;
+        color: $color-grey;
+    }
+}
+
+#testimonials{
+    background-color: $color-bluegreen;
+    font-family: $font-montserrat-med;
+    color: #fff;
+    padding: 60px 0;
+    .container{
+        padding: 0 15px;
+    }
+    #carouselExampleIndicators{
+        min-height: 360px;
+    }
+    h4{
+        margin: 100px 0 30px 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    h6{
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 100px;
+    }
+}
+
+#clients{
+    
+    img{
+        padding: 60px 0;
+    }
+}
+
+#need-project{
+    background-color: #f5f5f5;
+    padding: 100px 0;
+    .form-wrapper{
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        p{
+            margin: 0;
+            padding-bottom: 8px;
+        }
+
+        input, textarea{
+            margin-top: 30px;
+            border: none;
+            border-radius: 0;
+            max-width: 100%;
+        }
+
+        input{
+            
+            height: 48px;
+        }
+
+
+        .name-email-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            input{
+                
+                @include md{
+                    max-width: 321px;
+                    
+                }
+            }
+        }
+        
+        textarea{
+            min-height: 170px;
+            overflow: auto;
+            resize: none;
+        }
+        button{
+            display: block;
+            margin: 30px auto 0;
+
+        }
+    }
+}
+
+footer{
+    padding: 50px 0;
+    background-color: $color-dark;
+    color: #bcbcbc;
+    font-family: $font-nunito;
+    font-size: 15px;
+    h3{
+        color: #fff;
+        font-family: $font-montserrat-med;
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    
+    .footer-links{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a{
+        color: #bcbcbc;
+        text-transform: capitalize;
+    }
+
+    .footer-socials{
+        padding-left: 108px;
+    }
+
+    .footer-col, .footer-links, .footer-socials{
+        margin: 25px 0
+    }
+}
